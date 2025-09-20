@@ -1,0 +1,286 @@
+/* style.css (Updated with special professional coloring: Light blue hero background with subtle gradient effect, deep green accents, fade-in animation for special touch) */
+
+/* Root variables: Professional light blue palette with green accents */
+:root {
+    --light-blue: #E3F2FD; /* Light blue for hero background */
+    --olive-green: #2E7D32; /* Deep green for headings, buttons, and accents */
+    --text-dark: #333333; /* Dark text for readability */
+    --white: #FFFFFF; /* White for cards and light text */
+    --shadow: rgba(0, 0, 0, 0.1); /* Subtle shadows for depth */
+    --gradient-blue: linear-gradient(to bottom, #E3F2FD, #BBDEFB); /* Subtle gradient for hero */
+}
+
+/* Reset and base styles for consistency (HCI: Strive for consistency, Reduce short-term memory load) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif; /* More professional serif font for restaurant elegance */
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-blue);
+}
+
+/* Container for centered content and max-width for readability */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header: Consistent navigation across pages (HCI: Consistency) */
+header {
+    background-color: var(--olive-green);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em; /* Larger for professionalism */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--light-blue);
+}
+
+/* Hero section: Light blue gradient background with fade-in effect (HCI: Informative feedback via clear buttons) */
+.hero {
+    background: var(--gradient-blue);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 80px 0;
+    animation: fadeIn 1.5s ease-in-out; /* Special fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--olive-green);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Buttons: Consistent styling, hover feedback with scale effect (HCI: Offer informative feedback) */
+.button {
+    background-color: var(--olive-green);
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1B5E20; /* Darker green on hover */
+    transform: scale(1.05); /* Special scale effect for touch */
+}
+
+/* Grid layout for menu and services (responsive, HCI: Support internal locus of control with easy navigation) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Space between categories */
+}
+
+.card {
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--olive-green);
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    color: var(--olive-green);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--olive-green);
+    margin-bottom: 10px;
+}
+
+/* Dish images for visual appeal (HCI: Aesthetic and minimalist design, added for better user engagement) */
+.dish-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Soft corners for modern look */
+}
+
+/* Icons for services */
+.icon {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Sections: Consistent padding and headings */
+.menu-section, .services-section, .about-section, .contact-section, .team-section, .specialties-section, .why-choose-us-section {
+    padding: 60px 0;
+}
+
+h2, h3 {
+    color: var(--olive-green);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8em; /* Category headings */
+    margin-top: 40px;
+}
+
+/* About section: Flex layout for image and content (HCI: Reduce memory load with clear structure) */
+.flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image {
+    max-width: 40%;
+    height: auto;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 8px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.about-content li {
+    margin-bottom: 5px;
+}
+
+/* Contact section: Flex for info and form, HTML5 validation for error handling (HCI: Simple error handling, Permit reversal via browser back) */
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background-color: var(--white);
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* Text center for buttons */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer: Consistent across pages */
+footer {
+    background-color: var(--olive-green);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive design: Media queries for mobile (HCI: Consistency across devices, Reduce memory load with adaptive layout) */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}

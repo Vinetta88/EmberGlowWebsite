@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmberGlow Eatery - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>EmberGlow Eatery</h1>
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Menupage.html">Menu</a></li>
+                    <li><a href="Servicespage.html">Services</a></li>
+                    <li><a href="Aboutpage.html">About</a></li>
+                    <li><a href="Contactpage.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="container flex">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong> 123 Culinary Lane, Melbourne, VIC 3000, Australia</p>
+                    <p><strong>Phone:</strong> +61 3 1234 5678</p>
+                    <p><strong>Email:</strong> info@embergloweatery.com.au</p>
+                </div>
+                <div class="contact-form">
+                    <h2>Make a Reservation</h2>
+                    <form action="mailto:info@embergloweatery.com.au" method="post" enctype="text/plain">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                        
+                        <label for="people">Number of People:</label>
+                        <input type="number" id="people" name="people" placeholder="Number of People" min="1" max="20" required>
+                        
+                        <label for="message">Special Requests:</label>
+                        <textarea id="message" name="message" placeholder="Any special requests?"></textarea>
+                        
+                        <button type="submit" class="button">Submit Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EmberGlow Eatery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
